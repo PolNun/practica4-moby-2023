@@ -1,10 +1,9 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-error404',
   templateUrl: './error404.component.html',
-  styles: [
-  ]
+  styles: []
 })
 export class Error404Component {
 
