@@ -28,6 +28,11 @@ ul {
   padding: 0;
 }
 
+.uppercaseOn {
+  background-color: gray;
+  color: white;
+}
+
 @media (max-width: 768px) {
   button {
     width: 100%;

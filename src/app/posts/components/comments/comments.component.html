@@ -13,7 +13,8 @@
     <button (click)="onClick()">
       Ver la fecha del último comentario
     </button>
-    <button (click)="letterCaseSwitch = !letterCaseSwitch">
+    <button (click)="letterCaseSwitch = !letterCaseSwitch"
+    [ngClass]="{'uppercaseOn': letterCaseSwitch}">
       Título de comentarios a {{(letterCaseSwitch) ? 'minúsculas' : 'mayúsculas'}}
     </button>
   </div>
