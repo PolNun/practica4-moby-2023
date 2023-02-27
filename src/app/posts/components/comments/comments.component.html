@@ -4,13 +4,16 @@
     <ul>
       <li *ngFor="let comment of comments">
         <span><strong>{{comment.email}}</strong></span>
+        <h4>{{comment.name}}</h4>
         <p>{{capitalizeFirstLetter(comment.body)}}.</p>
       </li>
     </ul>
   </div>
-  <button (click)="onClick()">
-    Ver la fecha del último comentario
-  </button>
+  <div class="btn-container">
+    <button (click)="onClick()">
+      Ver la fecha del último comentario
+    </button>
+  </div>
 </section>
 
 <ng-template #hasNoComments>

@@ -1,15 +1,16 @@
 <main *ngIf="post; else loadingPost">
   <h1>Detalles del post {{post.id}}</h1>
-  <span *ngIf="lastCommentDate">Último comentario: {{lastCommentDate | date:'fullDate'
-    }}</span>
+  <span *ngIf="lastCommentDate">
+    Último comentario: {{lastCommentDate | date:'d/M/y'}}
+  </span>
   <hr>
   <h1>{{post.title | titlecase}}</h1>
   <p>{{capitalizeFirstLetter(post.body)}}.</p>
   <hr>
   <hr>
   <hr>
-  <app-comments [postId]="post.id"
-  (lastCommentDate)="getLastCommentDate($event)">
+  <app-comments (lastCommentDate)="setLastCommentDate($event)"
+                [postId]="post.id">
   </app-comments>
 </main>
 <ng-template #loadingPost>

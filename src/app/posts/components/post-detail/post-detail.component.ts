@@ -29,7 +29,7 @@ export class PostDetailComponent implements OnInit {
     return str.charAt(0).toUpperCase() + str.slice(1);
   }
 
-  getLastCommentDate($event: Date) {
+  setLastCommentDate($event: Date) {
     this.lastCommentDate = $event;
   }
 }

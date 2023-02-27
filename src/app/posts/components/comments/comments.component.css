@@ -1,0 +1,30 @@
+button {
+  background-color: lightgray;
+  padding: 9px;
+  margin: 8px 0;
+  border: 1px solid black;
+  cursor: pointer;
+  width: 40%;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+section {
+  margin: 0 0 20px 0;
+}
+
+li {
+  list-style: none;
+  border: 1px solid black;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  button {
+    width: 100%;
+  }
+}
