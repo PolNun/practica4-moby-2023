@@ -11,6 +11,7 @@ import {ActivatedRoute} from "@angular/router";
 export class PostDetailComponent implements OnInit {
 
   post!: Post;
+  lastCommentDate!: Date;
 
   constructor(private jsonPhService: JsonPlaceholderService,
               private route: ActivatedRoute) {
@@ -26,5 +27,9 @@ export class PostDetailComponent implements OnInit {
 
   public capitalizeFirstLetter(str: string): string {
     return str.charAt(0).toUpperCase() + str.slice(1);
+  }
+
+  getLastCommentDate($event: Date) {
+    this.lastCommentDate = $event;
   }
 }

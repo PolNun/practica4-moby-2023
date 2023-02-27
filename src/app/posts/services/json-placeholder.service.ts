@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Router} from "@angular/router";
-import {Post} from "../interfaces/post.interface";
+import {Post, PostComment} from "../interfaces/post.interface";
 import {Observable} from "rxjs";
 
 @Injectable({
@@ -21,5 +21,9 @@ export class JsonPlaceholderService {
 
   getPost(id: number): Observable<Post> {
     return this.http.get<Post>(`${this.BASE_URL}/posts/${id}`);
+  }
+
+  getComments(id: number): Observable<PostComment[]> {
+    return this.http.get<PostComment[]>(`${this.BASE_URL}/comments?postId=${id}`);
   }
 }
