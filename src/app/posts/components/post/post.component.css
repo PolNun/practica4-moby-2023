@@ -3,3 +3,9 @@ table, tr, th, td {
   border: 1px solid #ccc;
   padding: 6px;
 }
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

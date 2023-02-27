@@ -1,3 +1,9 @@
-<main>
-  <h1>Detalles del post.</h1>
+<main *ngIf="post; else loadingPost">
+  <h1>Detalles del post {{post.id}}</h1>
+  <hr>
+  <h1>{{post.title | titlecase}}</h1>
+  <p>{{capitalizeFirstLetter(post.body)}}</p>
 </main>
+<ng-template #loadingPost>
+  <h1>Cargando...</h1>
+</ng-template>
