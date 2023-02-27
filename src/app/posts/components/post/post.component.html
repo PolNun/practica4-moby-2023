@@ -1,0 +1,10 @@
+<table>
+  <tr>
+    <th>Nombre</th>
+    <th>Detalles</th>
+  </tr>
+  <tr *ngFor="let post of posts;">
+    <td>{{post.title}}</td>
+    <td><a routerLink="{{post.id}}">Ver post {{post.id}}</a></td>
+  </tr>
+</table>
