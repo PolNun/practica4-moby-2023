@@ -12,6 +12,7 @@ export class CommentsComponent implements OnInit {
   @Output() lastCommentDate: EventEmitter<Date> = new EventEmitter<Date>();
 
   comments!: PostComment[];
+  letterCaseSwitch: boolean = false;
 
   constructor(private jsonPhService: JsonPlaceholderService) {
   }

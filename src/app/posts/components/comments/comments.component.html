@@ -4,7 +4,7 @@
     <ul>
       <li *ngFor="let comment of comments">
         <span><strong>{{comment.email}}</strong></span>
-        <h4>{{comment.name}}</h4>
+        <h4>{{comment.name | lettercase:letterCaseSwitch}}</h4>
         <p>{{capitalizeFirstLetter(comment.body)}}.</p>
       </li>
     </ul>
@@ -12,6 +12,9 @@
   <div class="btn-container">
     <button (click)="onClick()">
       Ver la fecha del último comentario
+    </button>
+    <button (click)="letterCaseSwitch = !letterCaseSwitch">
+      Título de comentarios a {{(letterCaseSwitch) ? 'minúsculas' : 'mayúsculas'}}
     </button>
   </div>
 </section>
