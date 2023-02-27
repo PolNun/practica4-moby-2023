@@ -4,12 +4,14 @@ import {CommonModule} from '@angular/common';
 import {PostsRoutingModule} from './posts-routing.module';
 import {PostComponent} from './components/post/post.component';
 import {PostDetailComponent} from './components/post-detail/post-detail.component';
+import { CommentsComponent } from './components/comments/comments.component';
 
 
 @NgModule({
   declarations: [
     PostComponent,
-    PostDetailComponent
+    PostDetailComponent,
+    CommentsComponent
   ],
   imports: [
     CommonModule,
