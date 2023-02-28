@@ -12,13 +12,13 @@ const routes: Routes = [
     component: Error404Component
   },
   {
-    path: '**',
-    redirectTo: '404'
+    path: '',
+    pathMatch: 'full',
+    redirectTo: 'posts'
   },
   {
-    path: '',
-    redirectTo: 'posts',
-    pathMatch: 'full'
+    path: '**',
+    redirectTo: '404'
   }
 ];
 
